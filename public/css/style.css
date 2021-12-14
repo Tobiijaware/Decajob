@@ -1,0 +1,813 @@
+/* header */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.navigation {
+    width: 100%;
+    padding: 50px 15px;
+
+}
+
+.navigation .nav-container {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.toggle span {
+    font-size: 25px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    margin-right: 4px;
+}
+
+.logo-title p {
+    font-size: 1.7rem!important;
+    font-weight: 500;
+}
+
+.nav-list {
+    background-color: #34a853;
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    left: 40px;
+    top: 120px;
+    cursor: pointer;
+    padding: 50px 80px;
+    z-index: 2;
+    color: white;
+    /*transition: ;*/
+}
+
+.container {
+    width: 100%;
+
+}
+
+.job-container {
+    width: 100%;
+    height: 120px;
+    margin-right: 3px;
+    margin-left: 3px;
+    border-bottom: 1px solid #34a853;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid green; */
+}
+
+/* .fix{
+    display: flex;
+} */
+
+.job-container:hover {
+    background-color: #34a853;
+    color: #fff;
+}
+
+.job-container:hover .skills {
+    border:1px solid #fff;
+}
+
+.job-image {
+    padding: 10px 5px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.inner-job {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.job-title {
+    margin-left: 20px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.job-description .description {
+    margin: 6px;
+}
+
+.skills-container {
+    margin-bottom: 10px;
+}
+
+.skills {
+    padding: 3px 5px;
+    border: 1px solid #34a853;
+    margin: 6px;
+    border-radius: 5px;
+    font-size: small;
+    margin: bottom 4px !important;
+}
+
+.footer-container {
+    padding: 10px 6px;
+
+}
+
+.footer-container .footer-links-wrapper {
+    display: grid;
+    place-content: center;
+}
+
+.footer-container .footer-nav-list {
+    display: flex;
+}
+
+.footer-nav-list li {
+    margin-right: 7px;
+}
+
+.footer-info {
+    display: grid;
+    place-content: center;
+}
+
+.footer-copyright {
+    display: grid;
+    place-content: center;
+}
+
+.button {
+    display: block;
+    padding:9px 9px;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 9px 12px;
+}
+
+.btn-success {
+    background-color: #34a853;
+    color: #fff;
+}
+
+#newsletter-section {
+    padding: 27px 0;
+    background-color: #34a853;
+    margin-bottom: 10px;
+}
+
+.input-element {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+
+}
+
+.input-element:focus {
+    outline: none!important;
+    border: none !important;
+
+}
+
+
+
+#email-subscription-btn {
+    background-color: #1520A6;
+    border-radius: 0 5px 5px 0;
+    width: 100px;
+    color: #fff;
+}
+
+/* ------------- Modal ---------------- */
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 35%;
+    top: 70px;
+    width: 400px;
+    height: 600px;
+    border: 1px solid red;
+    overflow-y:hidden;
+    border-radius: 5px;
+    background-color: #fefefe;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition:all 150ms ease-in-out;
+  }
+
+  .loginmodal{
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 35%;
+    top: 70px;
+    width: 400px;
+    height: 350px;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: #fefefe;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition:all 150ms ease-in-out;
+  }
+
+  .forgotmodal{
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 35%;
+    top: 70px;
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: #fefefe;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition:all 150ms ease-in-out;
+  }
+
+
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 13px;
+    width: 80%;
+  }
+
+  .form-container{
+      margin-bottom: 3px;
+  }
+
+  .form-element{
+    margin:auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 100%;
+  }
+  .form-element-btn{
+    margin:auto;
+    padding: 15px;
+    background-color: #34a853;
+    width: 100%;
+    color: white;
+  }
+
+  .form-element:focus {
+    outline: none!important;
+}
+
+.forgotpassword{
+    font-size: 15px;
+}
+
+  /* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    margin-right:10px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+/* The modal error validation */
+.error-alert {
+    color: red;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+/* ------------- end of modal --------------  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:400px){
+
+
+    .nav-list {
+        font-size: 15px;
+        padding: 25px 55px;
+    }
+
+    .job-container {
+       height: 160px;
+    }
+
+     .job-title {
+        font-size: 19px;
+    }
+
+     .skills {
+        font-size: 11px;
+    }
+
+    .btn {
+    padding: 7px 11px;
+    border-radius:4px;
+    font-size:19px;
+    }
+
+    .modal {
+        left: 15%;
+        top: 100px;
+        width: 220px;
+        height: 350px;
+      }
+
+      .form-element{
+        padding: 10px;
+      }
+      .form-element-btn{
+        padding: 10px;
+      }
+
+      .loginmodal{
+        left: 15%;
+        top: 100px;
+        width: 220px;
+        height: 270px;
+      }
+
+      .forgotpassword{
+        font-size: 9px;
+    }
+
+      .forgotmodal{
+        left: 15%;
+        top: 100px;
+        width: 250px;
+        height: 300px;
+      }
+
+
+
+
+
+
+}
+
+@media only screen and (max-width:250px){
+
+    .nav-list {
+        font-size: 10px;
+        padding: 15px 35px;
+    }
+
+    .job-container {
+       height: 130px;
+    }
+
+     .job-title {
+        font-size: 10px;
+    }
+
+     .skills {
+        font-size: 5px;
+    }
+
+    .btn {
+    padding: 3px 6px;
+    border-radius:4px;
+    font-size:10px;
+    }
+
+    .input-section{
+        height:20px!important;
+        font-size:10px!important;
+    }
+
+    .input-element{
+        width:80px!important;
+    }
+
+    .input-element-submit{
+        width:50px!important;
+
+    }
+
+    .footer-links-wrapper,
+    .footer-info,
+    .footer-copyright{
+        font-size:15px!important;
+    }
+
+
+    .modal {
+        left: 10%;
+        top: 90px;
+        width: 160px;
+        height: 250px;
+      }
+
+      .form-element{
+        padding: 10px;
+      }
+      .form-element-btn{
+        padding: 10px;
+      }
+
+      .loginmodal{
+        left: 10%;
+        top: 90px;
+        width: 160px;
+        height: 250px;
+      }
+
+      .forgotpassword{
+        font-size: 7px;
+    }
+
+      .forgotmodal{
+        left: 2%;
+        top: 90px;
+        width: 160px;
+        height: 250px;
+      }
+}
+
+
+
+@media only screen and (min-width: 576px) {
+
+
+    .logo-title p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .nav-list {
+        font-size: 35px;
+        padding: 60px 120px;
+    }
+
+    .job-container {
+       width: 100%;
+       height: 200px;
+       word-wrap: break-word;
+
+
+    }
+
+    .job-container:hover {
+        background-color: #34a853;
+        color: #fff;
+    }
+    .job-container:hover .skills {
+        border:1px solid #fff;
+    }
+
+    .job-title {
+        font-size: 23px;
+    }
+
+    .skills-container {
+        margin-bottom: 12px;
+    }
+
+    .skills {
+        padding: 4px 6px;
+        border: 1px solid #34a853;
+        margin: 8px;
+        font-size: medium;
+    }
+
+    .nav-list {
+        font-size: 15px;
+        padding: 35px 65px;
+    }
+
+
+    .modal {
+        left: 15%;
+        top: 100px;
+        width: 300px;
+        height: 420px;
+      }
+
+      .form-element{
+        padding: 15px;
+      }
+      .form-element-btn{
+        padding: 15px;
+      }
+
+      .loginmodal{
+        left: 15%;
+        top: 100px;
+        width: 290px;
+        height: 320px;
+      }
+
+      .forgotpassword{
+        font-size: 13px;
+    }
+
+      .forgotmodal{
+        left: 15%;
+        top: 100px;
+        width: 300px;
+        height: 350px;
+      }
+
+
+
+    /* .job-description .description {
+        font-size: 15px;
+        line-height: 20px;
+    } */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .job-container {
+        display: flex;
+        align-items: center;
+        height: 150px;
+        justify-content: space-between;
+    }
+   .job-description {
+        display: none;
+    }
+
+    .button {
+        display: block;
+    }
+
+    .job-container:hover .btn-success {
+        background-color: #000;
+    }
+
+    .job-container:hover .skills {
+        border: 1px solid #fff;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .nav-list {
+        background-color: white;
+        display: flex;
+        font-size: 15px;
+        cursor: pointer;
+        color: black;
+        position: inherit;
+        padding: 0;
+    }
+
+    .nav-list li {
+        margin: 10px;
+        padding: 10px 10px;
+    }
+
+    .nav-list li:first-child {
+        border: 1px solid #34a853;
+        border-radius: 5px;
+    }
+
+    .nav-list li:first-child:hover {
+        background-color: #34a853;
+        color: #fff;
+    }
+
+
+
+
+
+    .modal {
+        left: 25%;
+        top: 100px;
+        width: 320px;
+        height: 480px;
+      }
+
+      .form-element{
+        padding: 20px;
+      }
+      .form-element-btn{
+        padding: 20px;
+      }
+
+      .loginmodal{
+        left: 25%;
+        top: 100px;
+        width: 310px;
+        height: 370px;
+      }
+
+      .forgotpassword{
+        font-size: 17px;
+    }
+
+      .forgotmodal{
+        left: 25%;
+        top: 100px;
+        width: 350px;
+        height: 450px;
+      }
+
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+
+
+    .job-container {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-between;
+    }
+    .job-description {
+        display: none;
+    }
+
+    .button {
+        display: block;
+    }
+
+    .job-container:hover .btn-success {
+        background-color: #000;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .nav-list {
+        background-color: white;
+        display: flex;
+        font-size: 15px;
+        cursor: pointer;
+        color: black;
+        position: inherit;
+        padding: 0;
+    }
+
+    .nav-list li {
+        margin: 10px;
+        padding: 10px 10px;
+    }
+
+    .nav-list li:first-child {
+        border: 1px solid #34a853;
+        border-radius: 5px;
+    }
+
+    .nav-list li:first-child:hover {
+        background-color: #34a853;
+        color: #fff;
+    }
+
+    .modal {
+        left: 25%;
+        top: 100px;
+        width: 320px;
+        height: 480px;
+      }
+
+      .form-element{
+        padding: 20px;
+      }
+      .form-element-btn{
+        padding: 20px;
+      }
+
+      .loginmodal{
+        left: 25%;
+        top: 100px;
+        width: 310px;
+        height: 370px;
+      }
+
+      .forgotpassword{
+        font-size: 17px;
+    }
+
+      .forgotmodal{
+        left: 25%;
+        top: 100px;
+        width: 350px;
+        height: 450px;
+      }
+
+}
+@media only screen and (min-width: 1200px) {
+
+    body{
+        overflow-x:hidden;
+    }
+
+
+    .job-container {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-between;
+    }
+    .job-description {
+        display: none;
+    }
+
+    .button {
+        display: block;
+    }
+
+    .job-container:hover .btn-success {
+        background-color: #000;
+    }
+
+    .toggle {
+        border: 1px solid red;
+        display: none;
+    }
+
+    .nav-list {
+        background-color: white;
+        display: flex;
+        font-size: 15px;
+        cursor: pointer;
+        color: black;
+        position: inherit;
+        padding: 0;
+    }
+
+    .nav-list li {
+        margin: 10px;
+        padding: 10px 10px;
+    }
+
+    .nav-list li:first-child {
+        border: 1px solid #34a853;
+        border-radius: 5px;
+    }
+
+    .nav-list li:first-child:hover {
+        background-color: #34a853;
+        color: #fff;
+    }
+
+
+
+    .modal {
+        left: 35%;
+        top: 70px;
+        width: 400px;
+        height: 450px;
+      }
+
+      .form-element{
+        padding: 15px;
+      }
+      .form-element-btn{
+        padding: 15px;
+      }
+
+      .loginmodal{
+        left: 35%;
+        top: 70px;
+        width: 400px;
+        height: 350px;
+      }
+
+      .forgotpassword{
+        font-size: 15px;
+    }
+
+      .forgotmodal{
+        left: 35%;
+        top: 70px;
+        width: 400px;
+        height: 400px;
+      }
+
+
+}
