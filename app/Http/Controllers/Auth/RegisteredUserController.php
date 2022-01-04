@@ -50,6 +50,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
+        session()->flash('success', 'Authentication Successful');
 
         Auth::login($user);
 
