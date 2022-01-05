@@ -17,7 +17,7 @@ body {
     top:50px!important;
     right:10px!important;
     text-align: center;
-    
+
 }
 
 .alert-error{
@@ -31,7 +31,7 @@ body {
     top:50px!important;
     right:10px!important;
     text-align: center;
-   
+
 
 }
 
@@ -268,6 +268,8 @@ body {
     margin: 11% auto;
     padding: 13px;
     width: 80%;
+    animation-name: animatetop;
+    animation-duration: 1s
   }
 
   .form-container{
@@ -325,6 +327,11 @@ body {
     filter: blur(5px);
     pointer-events : none;
 }
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
 
 
 /* ------------- end of modal --------------  */

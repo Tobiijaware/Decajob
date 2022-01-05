@@ -41,10 +41,13 @@ loginbtn.onclick = function() {
     forgotmodal.style.display = "none";
     $('.container' ).addClass('blur');
 
+
 }
 loginspan.onclick = function() {
     loginmodal.style.display = "none";
     $('.container' ).removeClass('blur' );
+   
+
 }
 window.onclick = function(e) {
   if (e.target == loginmodal) {
